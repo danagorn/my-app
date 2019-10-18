@@ -62,7 +62,7 @@ render() {
 
     if(!this.props.finished){
       return (
-        <div className="App">
+        <div>
         <Navbar score={this.props.score} resetSameQuestions={this.resetSameQuestions} resetNewQuestions={this.resetNewQuestions}/>
         <Game question={this.props.questions[this.props.currentQuestion]}
         change={this.changeApply}

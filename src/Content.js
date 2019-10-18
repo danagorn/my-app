@@ -29,14 +29,17 @@ contentImage = () => {
 
   render() {
     return (
-      <div>
-      <div>
-      <div>
+      <div className="container">
+      <div className="left">
+      <p></p>
         <Question question={this.props.question.question}/>
+          <p></p>
         <img style={{width: 500, height: 281}} src={this.contentImage()}/>
         <p></p>
       </div>
-      <div>
+
+      <div clasName="right">
+        <h3>Answer</h3>
         <Answer question={this.props.question} inputChange={this.props.inputChange}/>
 
         <ul>{this.props.question.tips.map((elemento, i) => {
@@ -45,14 +48,6 @@ contentImage = () => {
         }
         </ul>
         </div>
-        </div>
-        <Image style={{width:80}}src={this.authorImage()} roundedCircle />
-        <p>{this.props.question.author.username}</p>
-
-
-
-
-
       </div>
   );
 }
