@@ -5,6 +5,7 @@ import { changeQuestion, questionAnswer, submit, initQuestions, reset, selectQue
 import Game from "./Game";
 import Results from "./Results";
 import Navbar from "./Navbar";
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 class App extends React.Component {

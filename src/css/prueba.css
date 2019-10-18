@@ -1,0 +1,20 @@
+.buttonAlign{
+display: flex;
+justify-content: center;
+}
+.container{
+  text-align: center;
+  flex-direction: row;
+}
+.container2{
+  flex-direction: column;
+}
+.right{
+  float: right;
+}
+.left{
+  float: left;
+}
+.center{
+  display: inline-block;
+}

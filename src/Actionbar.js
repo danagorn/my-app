@@ -1,5 +1,8 @@
 import React from 'react';
 import Numbers from "./Numbers";
+import Button from 'react-bootstrap/Button';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import './css/prueba.css';
 
 export default class Actionbar extends React.Component {
 
@@ -25,10 +28,14 @@ export default class Actionbar extends React.Component {
 
   render() {
     return (
-      <div>
-      <button disabled={this.disableMin()} onClick={this.previusChange}>Anterior</button>
-      <button disabled={this.disableMax()} onClick={this.nextChange}>Siguiente</button>
-      <button onClick={this.submit}>Submit</button>
+      <div class="text-center">
+<ButtonToolbar className="justify-content-center">
+      <Button variant="outline-primary" disabled={this.disableMin()} onClick={this.previusChange}>Anterior</Button>
+      <Button variant="primary" onClick={this.submit}>Submit</Button>
+      <Button variant="outline-primary" disabled={this.disableMax()} onClick={this.nextChange}>Siguiente</Button>
+</ButtonToolbar>
+<p></p>
+
       <Numbers questions={this.props.questions}
       currentQuestion={this.props.currentQuestion}
       selectNewQuestion={this.props.selectNewQuestion}/>

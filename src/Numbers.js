@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 
 export default class Numbers extends React.Component {
 
@@ -7,9 +9,9 @@ export default class Numbers extends React.Component {
       <div>
         {this.props.questions.map((elemento, i) => {
           if (this.props.currentQuestion == i){
-            return <button disabled={true} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</button>;
+            return <Button variant="primary" disabled={true} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
           }else{
-            return <button onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</button>;
+            return <Button variant="primary" onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
           }
         })
       }

@@ -4,21 +4,25 @@ import Answer from "./Answer";
 import Tip from "./Tip";
 import ImageUser from "./images/user-default.png";
 import ImageContent from "./images/no-image.png";
+import './css/prueba.css';
+import Image from 'react-bootstrap/Image';
+
 
 export default class Content extends React.Component {
 
+
 authorImage = () => {
-  if (this.props.question.author.photo.url == null || this.props.question.author.photo.url != ""){
+  try{
     return this.props.question.author.photo.url;
-  }else{
+  }catch{
     return ImageUser;
   }
 }
 
 contentImage = () => {
-  if (this.props.question.attachment.url == null || this.props.question.attachment.url != ""){
+  try{
     return this.props.question.attachment.url;
-  }else{
+  }catch{
     return ImageContent;
   }
 }
@@ -26,7 +30,13 @@ contentImage = () => {
   render() {
     return (
       <div>
+      <div>
+      <div>
         <Question question={this.props.question.question}/>
+        <img style={{width: 500, height: 281}} src={this.contentImage()}/>
+        <p></p>
+      </div>
+      <div>
         <Answer question={this.props.question} inputChange={this.props.inputChange}/>
 
         <ul>{this.props.question.tips.map((elemento, i) => {
@@ -34,12 +44,14 @@ contentImage = () => {
           })
         }
         </ul>
+        </div>
+        </div>
+        <Image style={{width:80}}src={this.authorImage()} roundedCircle />
+        <p>{this.props.question.author.username}</p>
 
-        <h4>{this.props.question.author.username}</h4>
 
 
-        <img src={this.authorImage()}/>
-        <img src={this.contentImage()}/>
+
 
       </div>
   );
