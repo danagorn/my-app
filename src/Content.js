@@ -30,7 +30,7 @@ contentImage = () => {
   render() {
     return (
       <div className="container">
-      <div className="left">
+      <div>
       <p></p>
         <Question question={this.props.question.question}/>
           <p></p>
@@ -38,7 +38,7 @@ contentImage = () => {
         <p></p>
       </div>
 
-      <div clasName="right">
+      <div>
         <h3>Answer</h3>
         <Answer question={this.props.question} inputChange={this.props.inputChange}/>
 

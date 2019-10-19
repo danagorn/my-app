@@ -9,7 +9,7 @@ export default class Numbers extends React.Component {
       <div>
         {this.props.questions.map((elemento, i) => {
           if (this.props.currentQuestion == i){
-            return <Button variant="primary" disabled={true} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
+            return <Button variant="outline-primary" disabled={true} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
           }else{
             return <Button variant="primary" onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
           }

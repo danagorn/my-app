@@ -18,9 +18,11 @@ authorImage = () => {
 render() {
   return (
     <div className="sideboard">
-    <h1> USER </h1>
-      <Image style={{width:120}}src={this.authorImage()} roundedCircle />
-      <p syle="color:white;">{this.props.question.author.username}</p>
+    <div className="text-sideboard">
+    <h3> USER </h3>
+      <Image style={{width:90}}src={this.authorImage()} roundedCircle />
+      <p>{this.props.question.author.username}</p>
+    </div>
     </div>
 );
 }
