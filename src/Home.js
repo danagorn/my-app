@@ -8,7 +8,7 @@ export default class Home extends React.Component {
     return (
       <div className="center">
       <p></p>
-        <h1>Bienvenido al Quiz de Álvaro y Dani</h1>
+        <h2>Bienvenido al Quiz de Álvaro y Dani</h2>
         <p></p>
       <Button size="lg" href="/play">PLAY</Button>
       <p></p>

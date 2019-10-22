@@ -9,10 +9,25 @@ export default class Numbers extends React.Component {
       <div>
         {this.props.questions.map((elemento, i) => {
           if (this.props.currentQuestion == i){
-            return <Button variant="outline-primary" disabled={true} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
+            if(i == 0){
+              return <Button variant="outline-primary" style={{borderTopRightRadius:0, borderBottomRightRadius:0}} disabled={true} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
+            }else if(i == this.props.questions.length-1){
+              return <Button variant="outline-primary" style={{borderTopLeftRadius:0, borderBottomLeftRadius:0}} disabled={true} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
+            }else{
+              return <Button variant="outline-primary" style={{borderRadius:0}} disabled={true} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
+            }
           }else{
-            return <Button variant="primary" onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
+            if(i == 0){
+              return <Button variant="primary" style={{borderTopRightRadius:0, borderBottomRightRadius:0}} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
+            }else if(i == this.props.questions.length-1){
+              return <Button variant="primary" style={{borderTopLeftRadius:0, borderBottomLeftRadius:0}} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
+            }else{
+              return <Button variant="primary" style={{borderRadius:0}} onClick={()=>this.props.selectNewQuestion(i)}>{i+1}</Button>;
+            }
+
           }
+
+
         })
       }
       </div>

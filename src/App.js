@@ -6,6 +6,7 @@ import Game from "./Game";
 import Results from "./Results";
 import Navbar from "./Navbar";
 import 'bootstrap/dist/css/bootstrap.css';
+import './css/prueba.css';
 
 
 class App extends React.Component {
@@ -64,6 +65,7 @@ render() {
       return (
         <div>
         <Navbar score={this.props.score} resetSameQuestions={this.resetSameQuestions} resetNewQuestions={this.resetNewQuestions}/>
+        <div className="App">
         <Game question={this.props.questions[this.props.currentQuestion]}
         change={this.changeApply}
         inputChange={this.inputChange}
@@ -73,12 +75,12 @@ render() {
         selectNewQuestion={this.selectNewQuestion}
         />
         </div>
+        </div>
       )
     } else {
       return (
-        <div className="App">
         <Results score={this.props.score} submit={this.submitChange} loadNewData={this.loadNewData}/>
-        </div>)
+      )
       }
 
     } else {

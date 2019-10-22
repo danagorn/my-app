@@ -12,20 +12,16 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      // <div>
-      //   <button onClick={this.props.resetSameQuestions}>Reintentar mismo juego</button>
-      //   <button onClick={this.props.resetNewQuestions}>Nuevo juego</button>
-      // </div>
 
       <Navibar bg="primary" variant="dark" fluid="true">
-    <Navibar.Brand href="/">Quiz</Navibar.Brand>
-    <Nav className="mr-auto">
-    <ButtonToolbar>
+      <span style={{textFont:40, marginRight:20, fontWeight:'bold', color: 'white'}}>Quiz</span>      
+      <Nav className="mr-auto">
+      <ButtonToolbar>
       <Button variant="primary" onClick={this.props.resetSameQuestions}>Reintentar</Button>
       <Button variant="primary" onClick={this.props.resetNewQuestions}>Nuevo Juego</Button>
       </ButtonToolbar>
-    </Nav>
-  </Navibar>
+      </Nav>
+      </Navibar>
 
     );
   }
