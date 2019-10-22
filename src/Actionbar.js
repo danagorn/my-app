@@ -30,13 +30,13 @@ export default class Actionbar extends React.Component {
     return (
       <div class="text-center">
       <div className="buttons">
-<ButtonToolbar className="justify-content-around">
+      <ButtonToolbar className="justify-content-around">
       <Button variant="outline-primary" disabled={this.disableMin()} onClick={this.previusChange}>Anterior</Button>
       <Button variant="primary" onClick={this.submit}>Submit</Button>
       <Button variant="outline-primary" disabled={this.disableMax()} onClick={this.nextChange}>Siguiente</Button>
-</ButtonToolbar>
-<p></p>
-</div>
+      </ButtonToolbar>
+      <p></p>
+      </div>
 
       <Numbers questions={this.props.questions}
       currentQuestion={this.props.currentQuestion}

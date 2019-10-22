@@ -2,7 +2,8 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "homepage": "./",
+    "dependencies": {
     "bootstrap": "^4.3.1",
     "create-react-app": "^3.2.0",
     "global": "^4.4.0",

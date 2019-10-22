@@ -25,10 +25,7 @@ export default class ReduxProvider extends React.Component {
   render() {
     return (
       <Provider store={ this.store }>
-      <Router history={browserHistory}>
-           <Route path="/" component={Home} />
-           <Route path="/play" component={App} />
-      </Router>
+        <App store={ this.store }/>
       </Provider>
     );
   }
